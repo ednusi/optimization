@@ -24,7 +24,7 @@ pair_t hillclimb(double (*function)(double), double guess){
 		double ldif = cur-lval;
 		double rdif = cur-rval;
 		
-		if(ldif<0&&rdif<0){
+		if(ldif<0&&rdif<0||(ldif==0&&rdif==0)){
 			done = 1; 
 		}else if(ldif>rdif){
 			cur = lval; guess = lstep;
